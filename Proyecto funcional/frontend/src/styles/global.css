@@ -1,0 +1,88 @@
+:root {
+  --bg: #111;
+  --card: #1a1a1a;
+  --accent: #00c3ff;
+  --text: #eee;
+  --text-muted: #9aa6b2;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+  padding-top: 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Bootstrap Overrides */
+.btn-custom {
+  background: linear-gradient(90deg,#007bff,var(--accent));
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 195, 255, 0.3);
+}
+
+.card {
+  background-color: var(--card);
+  color: #fff;
+  border-radius: .65rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bg-black { 
+  background-color: #000 !important; 
+}
+
+/* Product Images */
+.product-image {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: .65rem;
+  border-top-right-radius: .65rem;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+}
